@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Költségtérítés</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src='koltseg.js'></script>
+    <style>
+        .container {
+            width: 500px;
+        }
+
+
+        .form-group {
+            margin-bottom: 15px;
+
+        }
+    </style>
+</head>
+
+<body class="bg-secondary p-4">
+    <div class="container bg-warning p-4 rounded">
+        <h1 class="text-center">Költségtérítés</h1>
+<br>
+        <div class="form-group">
+            <label class="d-block ">Üzemanyag típusa:</label><br>
+            
+                <div class="form-check">
+                    <input type="radio" id="Benzin" name="anyag" class="form-check-input" value="benzin">
+                    <label for="Benzin" class="form-check-label"> Benzin </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="Gaz" name="anyag" class="form-check-input" value="diesel">
+                    <label for="Gaz" class="form-check-label"> Gázolaj </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="Elektro" name="anyag" class="form-check-input" value="elektromos">
+                    <label for="Elektro" class="form-check-label"> Elektromos </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="Lpg" name="anyag" class="form-check-input" value="lpg">
+                    <label for="Lpg" class="form-check-label"> LPG </label>
+                </div>
+            
+        </div>
+        
+
+        <div class="form-group">
+            <label class="d-block">Amortizációs díj (Ft/km):</label>
+            
+                <div class="form-check">
+                    <input type="radio" id="tizenot" name="amortizacio" class="form-check-input">
+                    <label for="tizenot" class="form-check-label">18 </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="harminc" name="amortizacio" class="form-check-input">
+                    <label for="harminc" class="form-check-label" >30 </label>
+                </div>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="fuelPrice" class="d-block text-center bg">Üzemanyag ár:</label>
+            <input type="number" id="fuelPrice" min="100" class="form-control" placeholder="Ft/l">
+        </div>
+
+
+        <div class="form-group">
+            <label for="cm3input" class="d-block text-center">Hengerűrtartalom:</label>
+            <select name="cm3input" id="cm3input" class="form-control">
+                <option value="-1"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="rendszam" class="d-block text-center">Rendszám:</label>
+            <input type="text" id="rendszam" class="form-control" placeholder="Rendszám">
+        </div>
+
+        <div class="form-group">
+            <label for="gyarto" class="d-block text-center">Gyártó, típus:</label>
+            <input type="text" id="gyarto" class="form-control" placeholder="Gyártó, típus">
+        </div>
+
+        <div class="form-group">
+            <label for="honnanHova" class="d-block text-center">Honnan-hova:</label>
+            <input type="text" id="honnanHova" class="form-control" placeholder="Honnan-hova">
+        </div>
+
+        <div class="form-group">
+            <label for="distance" class="d-block text-center">Megtett távolság:</label>
+            <input type="number" id="distance" class="form-control" placeholder="km">
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" disabled>Számolás</button>
+        </div>
+    </div>
+</body>
+
+</html>
